@@ -143,6 +143,59 @@ The checker will output:
 
 ---
 
+## Algorithm Strategy
+
+The implementation uses a **chunking-based sorting algorithm**:
+
+1. **Initialization**: Parse input and distribute numbers into chunks
+2. **Chunk Assignment**: Divide the stack into sortable chunks based on value ranges
+3. **Progressive Sorting**: Sort each chunk and move elements strategically between stacks
+4. **Optimization**: Minimize total operations through intelligent operation selection
+
+This approach achieves efficient sorting for various input sizes while maintaining reasonable operation counts.
+
+## Implementation Details
+
+### Key Functions
+
+- **`ft_init_stacks()`**: Parse command-line arguments and initialize stacks
+- **`ft_init_chunks()`**: Determine chunk boundaries and assignments
+- **`ft_exec_sort()`**: Execute the main sorting algorithm
+- **`ft_sort_chunks()`**: Sort elements within their assigned chunks
+- **`ft_impera()`**: Issue and optimize operation commands
+- **`ft_check_sort()`** (bonus): Validate if stacks are sorted
+
+### Data Structures
+
+The program uses linked lists to represent stacks, with each node containing:
+- Integer value
+- Position information
+- Chunk assignment
+- Navigation pointers
+
+## Language Composition
+
+- **C**: 83.9%
+- **C++**: 10.3% (visualizer)
+- **Makefile**: 3.2%
+- **CMake**: 1.4% (visualizer)
+- **Other**: 1.2%
+
+## Technical Specifications
+
+- **Compiler Flags**: `-Wall -Wextra -Werror -g -gdwarf-4 -O3`
+- **Standard**: C99 (C++17 for visualizer)
+- **Memory Management**: Manual allocation and deallocation with cleanup functions
+- **Error Handling**: Comprehensive input validation and error reporting
+
+## Performance Characteristics
+
+- **Time Complexity**: O(n log n) average case for optimal chunk-based sorting
+- **Space Complexity**: O(n) for stack storage
+- **Operation Efficiency**: Optimized for competitive operation counts
+
+---
+
 ## Tools Guide
 
 ### 1. **Automated Tester** (`tools/Tester_pushswap.sh`)
@@ -499,57 +552,6 @@ cmake .. && make
 ```
 
 ---
-
-## Algorithm Strategy
-
-The implementation uses a **chunking-based sorting algorithm**:
-
-1. **Initialization**: Parse input and distribute numbers into chunks
-2. **Chunk Assignment**: Divide the stack into sortable chunks based on value ranges
-3. **Progressive Sorting**: Sort each chunk and move elements strategically between stacks
-4. **Optimization**: Minimize total operations through intelligent operation selection
-
-This approach achieves efficient sorting for various input sizes while maintaining reasonable operation counts.
-
-## Implementation Details
-
-### Key Functions
-
-- **`ft_init_stacks()`**: Parse command-line arguments and initialize stacks
-- **`ft_init_chunks()`**: Determine chunk boundaries and assignments
-- **`ft_exec_sort()`**: Execute the main sorting algorithm
-- **`ft_sort_chunks()`**: Sort elements within their assigned chunks
-- **`ft_impera()`**: Issue and optimize operation commands
-- **`ft_check_sort()`** (bonus): Validate if stacks are sorted
-
-### Data Structures
-
-The program uses linked lists to represent stacks, with each node containing:
-- Integer value
-- Position information
-- Chunk assignment
-- Navigation pointers
-
-## Language Composition
-
-- **C**: 83.9%
-- **C++**: 10.3% (visualizer)
-- **Makefile**: 3.2%
-- **CMake**: 1.4% (visualizer)
-- **Other**: 1.2%
-
-## Technical Specifications
-
-- **Compiler Flags**: `-Wall -Wextra -Werror -g -gdwarf-4 -O3`
-- **Standard**: C99 (C++17 for visualizer)
-- **Memory Management**: Manual allocation and deallocation with cleanup functions
-- **Error Handling**: Comprehensive input validation and error reporting
-
-## Performance Characteristics
-
-- **Time Complexity**: O(n log n) average case for optimal chunk-based sorting
-- **Space Complexity**: O(n) for stack storage
-- **Operation Efficiency**: Optimized for competitive operation counts
 
 ## Contributing
 
