@@ -555,13 +555,13 @@ The program uses linked lists to represent stacks, with each node containing:
 
 This is an educational project. Feel free to study the code and understand the algorithm implementation.
 
-## Author
-
-aale01
-
 ## License
 
-This project may be subject to specific educational institution licensing requirements. Please refer to the subject document for full licensing details.
+Educational project created as part of 42 cursus.
+
+## Author
+
+**abecucci** (abecucci@student.42roma.it)
 
 ---
 
