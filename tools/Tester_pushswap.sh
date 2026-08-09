@@ -18,7 +18,7 @@ ARG="${ARG//\'/}"
 echo -e "\nNumeri generati: $ARG"
 
 # Esegui push_swap e cattura il numero di operazioni
-num_ops=$(./push_swap $ARG | wc -l)
+num_ops=$(../push_swap $ARG | wc -l)
 
 # Controlla i limiti solo per 100 e 500 numeri
 if [ "$quantita" -eq 100 ]; then
@@ -39,7 +39,7 @@ else
 fi
 
 # Esegui checker e cattura l'output
-output=$(./push_swap $ARG | ./checker_linux $ARG)
+output=$(../push_swap $ARG | ./checker_linux $ARG)
 
 # Colora e mette in grassetto l'output
 if [ "$output" = "OK" ]; then
