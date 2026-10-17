@@ -564,7 +564,3 @@ Educational project created as part of 42 cursus.
 ## Author
 
 **abecucci** (abecucci@student.42roma.it)
-
----
-
-**Note**: The `en.subject.pdf` file in this repository contains the original project specification and can be removed as needed.
